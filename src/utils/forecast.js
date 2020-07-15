@@ -15,9 +15,11 @@ const forecast = (coordinates, callback) => {
       callback(
         undefined,
         body.current.weather_descriptions[0] +
-          ". The current temperature in " +
+          ". At " +
+          body.current.observation_time +
+          " the temperature in " +
           body.location.name +
-          " is " +
+          " was " +
           body.current.temperature +
           ". It feels like " +
           body.current.feelslike +
